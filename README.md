@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+## Instructions
+Tha SPA was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Download and unzip the archived file or clone the github repository. After unzipping or cloning, run npm install to install the dependancies. I did deploy the finished SPA [here on Netlify](https://zen-panini-eb6e2b.netlify.app/) if you want to demo it.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Notes and thoughts on the assignment
 
-In the project directory, you can run:
+ - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ - The finished SPA is deployed [here on Netlify](https://zen-panini-eb6e2b.netlify.app/).
+ - I also added a github repo with the code
+ - I used Styled Components for styling as that is what I'm most familiar with.
+ - I tried to structure the the app and component tree in a logical, intuitive manner. There is a components folder with all the composite components, a data folder with my json file which gets imported into the App.js file, an images folder and styles/shared folder where I have some styles that are used in multiple components.
+ - I did not use the same font as in your Figma mockups because is is a commercial font. I swopped it out for Montserrat which is very similar.
+ - The page is fully mobile responsive.
+ - Although not specified in the technical assignment tasks, I can see from the mockups that theres the functionality to order the entries by the last communication date. I implemented this as well as the ability to sort the entries on any column in ascending or descending order by clicking on the column heading.
+ - I also implemented the unread status indicator in the Last communication entries as shown in the mockups.
+ - The *Search* input as well as the *Show archived* checkbox are controlled components.
 
-### `yarn start`
+## Task D - Questions
+**How long did this assignment take you and where did you spend your time?**
+To implement the core functionality as per the assignment tasks descriptions was +/- 4 hours. I did however spend additional time iterating over it to tweak the styling and implement additional functionality such as the ability to sort on any of the columns in ascending or descending order.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**What would you do differently or improve in your solution?**
+I'm pretty happy with my solution and I did make a number of improvements after initially coding it including the sorting functionality and the unread status indicator. I considered using the useContext hook as opposed to passing props down directly, but it is such a simple app with the component tree no more than two levels deep so I decided not to use it.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Do you have any feedback on this assignment? For example: What did you enjoy? What could be better? Which aspects were unclear?**
+I loved the assignment. I like that I got a little bit of practice on presenting data in a table format that can be sorted on any of the fields. What I possibly could do better is to break up my TableComponent.js component into two components to separate the logic from the presentation as the component has a lot of both at the moment.

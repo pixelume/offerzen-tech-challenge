@@ -69,8 +69,8 @@ const ReadStatusIndicator = styled.div`
   height: 0.7em;
   width: 0.7em;
   border-radius: 50%;
-  background-color: ${props => props.unread? '#00d400': 'transparent'};
-  margin-right: 1em;
+  background-color: ${props => props.unread? '#34B96F': 'transparent'};
+  margin-right: 0.5em;
 `
 
 const TR = styled.tr`
