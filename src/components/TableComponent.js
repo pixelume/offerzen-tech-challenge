@@ -85,7 +85,6 @@ const TR = styled.tr`
 `
 const TableComponent = ({headings, data, searchString, archiveBtnHandler, showArchive}) => {
   const [sortBy, setSortBy] = useState(false);
-  // const [sortOrder, setSortOrder] = useState('asc')
   
   const doSort = (dataArray, sortBy) => {
     switch (sortBy.heading) {
@@ -110,17 +109,17 @@ const TableComponent = ({headings, data, searchString, archiveBtnHandler, showAr
   }
   
   let displayedData = data;
-  if (searchString) { // Search Input Present
-    if (showArchive) { // Archived Items Shown
+  if (searchString) { // Search input was entered by user and...
+    if (showArchive) { // ...Show archived checkbox is ticked
       displayedData = data.filter(row => row.candidate.toLowerCase().includes(searchString.toLowerCase().trim()))
-    } else { // Archived Items Hidden
+    } else { // ...Show archived checkbox is NOT ticked
       displayedData = data.filter(row => row.candidate.toLowerCase().includes(searchString.toLowerCase().trim()) && !row.archived)
     }
-  } else { // No Search Input
+  } else { // No search input was entered by user and...
     if (sortBy.heading) {
       displayedData = doSort(data, sortBy)
     }
-    if (!showArchive) { // Archived Items Hidden
+    if (!showArchive) { // ...Show archived checkbox is NOT ticked
       displayedData = data.filter(row => !row.archived)
       if (sortBy.heading) {
         displayedData = doSort(displayedData, sortBy)
@@ -134,7 +133,6 @@ const TableComponent = ({headings, data, searchString, archiveBtnHandler, showAr
     } else {
       setSortBy({heading: heading, ascending: true})
     }
-    // setSortOrder(sortOrder => sortOrder === 'asc'? 'desc': 'asc')
   }
 
   return (

@@ -6,6 +6,7 @@ import { ReactComponent as Magnifier } from "../images/magnifier.svg";
 const StyledBox = styled(Box)`
   background-color: white;
 `;
+
 const StyledTextInput = styled.input.attrs(({ value }) => ({
   type: "text",
   placeholder: "Search",
