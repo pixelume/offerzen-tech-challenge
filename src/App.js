@@ -18,9 +18,6 @@ const App = () => {
     "Sent by"
   ];
 
-  // console.log(data)
-  console.log("searchString", searchString);
-
   const archiveBtnHandler = (candidate, isArchived) => {
     const newTableData = tableData.map((row, idx) => {
       if (candidate === row.candidate) {
@@ -35,8 +32,6 @@ const App = () => {
     });
     setTableData(newTableData);
   };
-
-  console.log(tableData);
 
   return (
     <>

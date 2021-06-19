@@ -74,13 +74,12 @@ const ReadStatusIndicator = styled.div`
 `
 
 const TR = styled.tr`
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #EEF3F6;
   ${props => props.unread? css`
     font-weight: bold;
   `: null};
   ${props => props.archived? css`
-    background-color: 'lightgrey';
-    opacity: 0.5;
+    background-color: #F9FAFB;
   `: null};
 `
 const TableComponent = ({headings, data, searchString, archiveBtnHandler, showArchive}) => {
